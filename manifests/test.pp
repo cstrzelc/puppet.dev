@@ -6,9 +6,9 @@ file { 'chris':
 
 notify { 'test-notify':
   name => 'name-tag',
-  message => "message from the notify tag: $enviornment",
+  message => "message from the notify tag: $environment",
 }
 
-node 'puppetclient.zfsgoat.com' {
+node default {
   include example
 }
