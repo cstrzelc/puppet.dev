@@ -9,6 +9,11 @@ notify { 'test-notify':
   message => "message from the notify tag: $environment",
 }
 
+notify { 'ntp-notify':
+  name => 'ntp-server',
+  message => "this is the ntp server: $ntpserver",
+}
+
 node default {
   include example
 }
